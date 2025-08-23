@@ -1,19 +1,13 @@
-// Easy 1 – Age Check (Adult/Minor)
-import java.util.Scanner;
-
-public class AgeCheck {
+public class PrintVariables {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
+        int age = 18;
+        double marks = 92.5;
+        char grade = 'A';
+        boolean isPass = true;
 
-        if (age >= 18) {
-            System.out.println("Adult");
-        } else {
-            System.out.println("Minor");
-        }
+        System.out.println("Age: " + age);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + grade);
+        System.out.println("Passed? " + isPass);
     }
 }
-
-
-
