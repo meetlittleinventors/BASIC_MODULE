@@ -1,11 +1,12 @@
 import java.util.Scanner;
+
 public class Medium1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt(), b = sc.nextInt();
-        if(a > b) System.out.println("a is greater");
-        else if(a < b) System.out.println("b is greater");
-        else System.out.println("Both are equal");
-        sc.close();
+        System.out.print("Enter three numbers: ");
+        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+
+        int max = (a > b && a > c) ? a : (b > c ? b : c);
+        System.out.println("Largest number is: " + max);
     }
 }
