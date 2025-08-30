@@ -1,29 +1,20 @@
 public class PasswordValidator {
     public static void main(String[] args) {
-        String password = "Hello123";  // try different cases
+        String password = "Java123";  // Test password
 
-        boolean hasUpper = false;
-        boolean hasDigit = false;
-        boolean hasSpace = false;
+        boolean hasUpper = false, hasDigit = false, hasSpace = false;
 
-        for (int i = 0; i < password.length(); i++) {
+        for(int i=0; i<password.length(); i++) {
             char ch = password.charAt(i);
-
-            if (Character.isUpperCase(ch)) {
-                hasUpper = true;
-            }
-            if (Character.isDigit(ch)) {
-                hasDigit = true;
-            }
-            if (Character.isWhitespace(ch)) {
-                hasSpace = true;
-            }
+            if(Character.isUpperCase(ch)) hasUpper = true;
+            if(Character.isDigit(ch)) hasDigit = true;
+            if(Character.isWhitespace(ch)) hasSpace = true;
         }
 
-        if (hasUpper && hasDigit && !hasSpace) {
-            System.out.println("Valid Password ");
+        if(hasUpper && hasDigit && !hasSpace && password.length() >= 6) {
+            System.out.println("Valid Password");
         } else {
-            System.out.println("Invalid Password ");
+            System.out.println("Invalid Password");
         }
     }
 }
