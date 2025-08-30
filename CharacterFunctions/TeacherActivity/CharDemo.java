@@ -3,17 +3,24 @@ public class CharDemo {
         char ch1 = 'A';
         char ch2 = '9';
         char ch3 = ' ';
-        
-        // Step 1: Check if letter
-        System.out.println(Character.isLetter(ch1));
-        
-        // Step 2: Check if digit
-        System.out.println(Character.isDigit(ch2));
-        
-        // Step 3: Check whitespace
-        System.out.println(Character.isWhitespace(ch3));
-        
-        // Step 4: Convert to lowercase
-        System.out.println(Character.toLowerCase(ch1));
+        char ch4 = 'm';
+
+        // Checking functions
+        System.out.println("isLetter(A): " + Character.isLetter(ch1));
+        System.out.println("isDigit(9): " + Character.isDigit(ch2));
+        System.out.println("isWhitespace(' '): " + Character.isWhitespace(ch3));
+
+        // Case checking
+        System.out.println("isUpperCase(A): " + Character.isUpperCase(ch1));
+        System.out.println("isLowerCase(m): " + Character.isLowerCase(ch4));
+
+        // Case conversion
+        System.out.println("toLowerCase(A): " + Character.toLowerCase(ch1));
+        System.out.println("toUpperCase(m): " + Character.toUpperCase(ch4));
+
+        // Conversion functions
+        System.out.println("toString(A): " + Character.toString(ch1));
+        System.out.println("getNumericValue('9'): " + Character.getNumericValue(ch2));
+        System.out.println("forDigit(10, 16): " + Character.forDigit(10, 16));
     }
 }
