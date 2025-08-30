@@ -1,13 +1,13 @@
 public class GreetingDemo {
     public static void main(String[] args) {
-        int time = 22; // try 9, 15, 22
+        int time = 22;  // try changing to 9, 15, 22
 
         if (time < 10) {
-            System.out.println("Good morning.");
+            System.out.println("Good morning");
         } else if (time < 20) {
-            System.out.println("Good day.");
+            System.out.println("Good day");
         } else {
-            System.out.println("Good evening.");
+            System.out.println("Good evening");
         }
     }
 }
