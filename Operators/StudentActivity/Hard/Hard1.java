@@ -1,25 +1,24 @@
 import java.util.Scanner;
+
 public class Hard1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double a = sc.nextDouble();
-        double b = sc.nextDouble();
-        char op = sc.next().charAt(0);
+        System.out.print("Enter basic salary: ");
+        double basic = sc.nextDouble();
 
-        switch(op) {
-            case '+': System.out.println("Result = " + (a + b)); break;
-            case '-': System.out.println("Result = " + (a - b)); break;
-            case '*': System.out.println("Result = " + (a * b)); break;
-            case '/': 
-                if(b != 0) System.out.println("Result = " + (a / b));
-                else System.out.println("Cannot divide by zero");
-                break;
-            case '%': 
-                if(b != 0) System.out.println("Result = " + (a % b));
-                else System.out.println("Cannot mod by zero");
-                break;
-            default: System.out.println("Invalid operator");
-        }
-        sc.close();
+        double allowance = basic * 0.2;   // 20% allowance
+        double deduction = basic * 0.1;   // 10% deduction
+        double netSalary = basic + allowance - deduction;
+
+        System.out.println("Basic Salary: " + basic);
+        System.out.println("Allowance: " + allowance);
+        System.out.println("Deduction: " + deduction);
+        System.out.println("Net Salary: " + netSalary);
+
+        // Relational + Logical
+        if(netSalary >= 50000)
+            System.out.println("Salary is above threshold.");
+        else
+            System.out.println("Salary is below threshold.");
     }
 }
