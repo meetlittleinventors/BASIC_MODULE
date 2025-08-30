@@ -1,12 +1,14 @@
 import java.util.Scanner;
+
 public class Easy2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt(), b = sc.nextInt();
-        if(b != 0)
-            System.out.println("Remainder = " + (a % b));
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is Even");
         else
-            System.out.println("Division by zero not allowed");
-        sc.close();
+            System.out.println(num + " is Odd");
     }
 }
