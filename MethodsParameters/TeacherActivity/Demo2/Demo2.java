@@ -1,10 +1,13 @@
-public class Demo2 {
-    static void addBonus(int[] marks) {
-        for (int i = 0; i < marks.length; i++) marks[i] += 5;
+class Demo2 {
+    static void updateArray(int[] arr) {
+        arr[0] = 99;
+        System.out.println("Inside updateArray(): arr[0] = " + arr[0]);
     }
+
     public static void main(String[] args) {
-        int[] m = {70, 80, 90};
-        addBonus(m);
-        for (int x : m) System.out.print(x + " ");
+        int[] nums = {10, 20, 30};
+        System.out.println("Before updateArray(): arr[0] = " + nums[0]);
+        updateArray(nums);
+        System.out.println("After updateArray(): arr[0] = " + nums[0]);
     }
 }
