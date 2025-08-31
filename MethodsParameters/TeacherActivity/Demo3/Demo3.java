@@ -1,10 +1,14 @@
-public class Demo3 {
-    static void printSum(int a, int b){ System.out.println("int: " + (a+b)); }
-    static void printSum(double a, double b){ System.out.println("double: " + (a+b)); }
+class Demo3 {
+    static void show(int x) {
+        System.out.println("show(int): " + x);
+    }
+
+    static void show(String text) {
+        System.out.println("show(String): " + text);
+    }
 
     public static void main(String[] args) {
-        printSum(2, 3);
-        printSum(2.0, 3.0);
-        printSum(2, 3.5);
+        show(10);
+        show("Java");
     }
 }
