@@ -1,39 +1,26 @@
 class BankAccount {
-    int balance;
+    double balance;
 
-    BankAccount(int initial) {
-        balance = initial;
-    }
-
-    void deposit(int amount) {
+    double deposit(double amount) {
         balance += amount;
-        System.out.println("Deposited: " + amount);
+        return balance;
     }
 
-    boolean withdraw(int amount) {
-        if (amount <= balance) {
+    double withdraw(double amount) {
+        if (balance >= amount) {
             balance -= amount;
-            System.out.println("Withdrawn: " + amount);
-            return true;
         } else {
-            System.out.println("Insufficient balance!");
-            return false;
+            System.out.println("Insufficient Balance!");
         }
-    }
-
-    int getBalance() {
         return balance;
     }
 }
 
-public class Demo5 {
+public class Main {
     public static void main(String[] args) {
-        BankAccount acc = new BankAccount(1000);
-
-        acc.deposit(500);
-        acc.withdraw(300);
-        acc.withdraw(1500);
-
-        System.out.println("Final Balance: " + acc.getBalance());
+        BankAccount acc = new BankAccount();
+        System.out.println("After Deposit: " + acc.deposit(5000));
+        System.out.println("After Withdraw: " + acc.withdraw(2000));
+        System.out.println("After Withdraw: " + acc.withdraw(4000));
     }
 }
