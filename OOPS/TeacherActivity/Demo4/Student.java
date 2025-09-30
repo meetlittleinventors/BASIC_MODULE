@@ -2,21 +2,24 @@ class Student {
     String name;
     int age;
 
-    Student(String n, int a) {
-        name = n;
-        age = a;
-    }
-
     void display() {
-        System.out.println("Student: " + name + ", Age: " + age);
+        System.out.println("Name: " + name + ", Age: " + age);
     }
 }
 
-public class Demo4 {
+public class Main {
     public static void main(String[] args) {
-        Student s1 = new Student("Rahul", 20);
-        Student s2 = new Student("Priya", 22);
-        Student s3 = new Student("Amit", 19);
+        Student s1 = new Student();
+        s1.name = "Alice";
+        s1.age = 20;
+
+        Student s2 = new Student();
+        s2.name = "Bob";
+        s2.age = 22;
+
+        Student s3 = new Student();
+        s3.name = "Charlie";
+        s3.age = 19;
 
         s1.display();
         s2.display();
