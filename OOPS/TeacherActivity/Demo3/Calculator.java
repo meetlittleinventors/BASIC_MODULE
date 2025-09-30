@@ -4,10 +4,9 @@ class Calculator {
     }
 }
 
-public class Demo3 {
+public class Main {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
-        int result = calc.add(10, 20);
-        System.out.println("Sum = " + result);
+        System.out.println("Sum: " + calc.add(5, 7));
     }
 }
